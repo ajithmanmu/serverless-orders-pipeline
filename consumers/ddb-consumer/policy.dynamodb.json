@@ -1,0 +1,12 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "WriteOrdersTable",
+        "Effect": "Allow",
+        "Action": ["dynamodb:PutItem", "dynamodb:UpdateItem"],
+        "Resource": "arn:aws:dynamodb:<region>:<account-id>:table/orders"
+      }
+    ]
+  }
+  

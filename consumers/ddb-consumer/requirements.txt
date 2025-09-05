@@ -1,0 +1,1 @@
+# boto3/botocore are provided by the Lambda runtime; keep this empty for console uploads.
