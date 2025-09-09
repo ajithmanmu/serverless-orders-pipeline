@@ -8,9 +8,9 @@ s3_consumer_src_dir  = "../../lambdas/s3-archive-consumer"
 
 # If your handlers differ, change these:
 runtime           = "python3.12"
-publisher_handler = "app.lambda_handler"
-ddb_handler       = "app.lambda_handler"
-s3_handler        = "app.lambda_handler"
+publisher_handler = "lambda_function.lambda_handler"
+ddb_handler       = "lambda_function.lambda_handler"
+s3_handler        = "lambda_function.lambda_handler"
 
 # Demo credentials (env vars in Lambda)
 client_id     = "demo-client-id"

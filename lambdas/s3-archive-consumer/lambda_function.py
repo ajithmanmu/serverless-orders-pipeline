@@ -11,7 +11,7 @@ from botocore.exceptions import ClientError
 log = logging.getLogger()
 log.setLevel(logging.INFO)
 
-BUCKET = os.environ["ARCHIVE_BUCKET"]
+BUCKET = os.environ["BUCKET_NAME"]
 PREFIX = os.environ.get("ARCHIVE_PREFIX", "orders/")
 
 s3 = boto3.client("s3")

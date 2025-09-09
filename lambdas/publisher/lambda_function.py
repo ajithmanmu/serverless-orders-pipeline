@@ -7,7 +7,7 @@ import boto3
 
 # Env vars (configure in Lambda console)
 TOPIC_ARN = os.environ["ORDERS_TOPIC_ARN"]     # arn:aws:sns:region:acct:orders-topic
-SHARED_SECRET = os.environ["SHARED_SECRET"].encode("utf-8")
+CLIENT_SECRET = os.environ["CLIENT_SECRET"].encode("utf-8")
 
 sns = boto3.client("sns")
 
@@ -25,12 +25,12 @@ def _decode_body(event) -> bytes:
 
 
 def _auth_ok(headers: dict, raw_body: bytes) -> bool:
-    """HMAC-SHA256 over the raw request body using SHARED_SECRET."""
+    """HMAC-SHA256 over the raw request body using CLIENT_SECRET."""
     client_id = headers.get("x-client-id")
     sig = headers.get("x-signature")
     if not client_id or not sig:
         return False
-    mac = hmac.new(SHARED_SECRET, raw_body, hashlib.sha256).hexdigest()
+    mac = hmac.new(CLIENT_SECRET, raw_body, hashlib.sha256).hexdigest()
     return hmac.compare_digest(mac, sig)
 
 
