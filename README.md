@@ -14,6 +14,8 @@ The project is built as a portfolio example to highlight Terraform-based infrast
 
 ## Architecture
 
+![architecture](architecture.png)  
+
 High-level flow:
 
 1. **ALB (public)**
@@ -79,3 +81,7 @@ curl -i -X POST "http://<ALB_DNS>/orders" \
   -H "X-Signature: demo-client-secret" \
   -d '{"orderId":"demo-001","items":[{"sku":"abc","qty":1}]}'
 ```
+
+## Demo
+
+https://www.loom.com/share/d1e6ba447fdd4edf8bcabe1b59703de1?sid=2525df44-cb27-45e9-9cc8-fbd1832a3ec1
