@@ -1,6 +1,6 @@
 # Serverless Orders Pipeline on AWS
 
-A detailed write-up of this project, including IAM policies, design decisions, and learnings, is published here: [Dev.to Blog Post](https://dev.to/ajithmanmu/hands-on-with-aws-building-and-securing-a-3-tier-web-app-1fjb).
+A detailed write-up of this project, including IAM policies, design decisions, and learnings, is published here: [Dev.to Blog Post](https://dev.to/ajithmanmu/how-i-built-a-secure-serverless-orders-pipeline-with-lambda-sns-and-sqs-36ej).
 
 ---
 
